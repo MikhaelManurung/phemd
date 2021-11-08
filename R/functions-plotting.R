@@ -444,7 +444,7 @@ plotGroupedSamplesDmap <- function(my_distmat, cluster_assignments=NULL, pt_sz=1
 #' plotSummaryHistograms(my_phemdObj_final, cluster_assignments, cell_model='monocle2)
 #'
 plotSummaryHistograms <- function(myobj, cluster_assignments, cell_model=c('monocle2','seurat', 'phate'), cmap=NULL, ncol.plot=4, ax.lab.sz=2.5, title.sz=3) {
-    cell_model <- match.arg(cell_model, c('monocle2','seurat'))
+    cell_model <- match.arg(cell_model, c('monocle2','seurat', "phate"))
     if(cell_model == 'monocle2') {
         monocle_obj <- monocleInfo(myobj)
         labels <- pData(phenoData(monocle_obj))
